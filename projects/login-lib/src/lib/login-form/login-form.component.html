@@ -1,0 +1,56 @@
+<header>
+  <div class="header_div_1">
+    <img src="../assests/icons/ais2_48.png" alt="" />
+  </div>
+  <div class="header_div_2">
+    <h1>Autentifikačný server AiS2</h1>
+    <h3>Univerzita Pavla Jozefa Šafárika v Košiciach (VÝVOJ)</h3>
+  </div>
+</header>
+<div class="login_form_container mt-4">
+      <form (ngSubmit)="onSubmit($event)" [formGroup]="loginForm" class="login_form">
+        <p>
+          <mat-form-field class="full_width">
+            <input
+              type="text"
+              name="username"
+              matInput
+              placeholder="Prihlasovacie meno"
+              formControlName="username"
+            />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field class="full_width">
+            <input
+              type="password"
+              name="password"
+              matInput
+              placeholder="Heslo"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-radio-group class="lang_radio-group" formControlName="lang">
+            <mat-radio-button value="SK">SK</mat-radio-button>
+            <mat-radio-button value="EN">EN</mat-radio-button>
+          </mat-radio-group>
+        </p>
+
+        <div class="login_button">
+          <button mat-raised-button color="primary" [disabled]="!loginForm.valid" type="submit">
+            Prihlasit sa
+          </button>
+        </div>
+      </form>
+  <div *ngIf="hasError" class="error-message">
+    <span class="mat-error">Prihlásenie zlyhalo! Znova skontrolujte používateľské meno a heslo a skúste to znova.</span>
+  </div>
+</div>
+
+<footer>
+  <p>Autentifikačný server AiS2 | ©</p>
+</footer>

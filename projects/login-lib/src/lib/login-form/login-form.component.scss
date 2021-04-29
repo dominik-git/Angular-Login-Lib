@@ -1,0 +1,54 @@
+header{
+  background: #002f68;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.header_div_2 h1{
+  text-align: center;
+}
+.login_form_container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login_form{
+  min-width: 250px;
+  border: 1px solid #d8d8d8;
+  background: #FFF;
+  padding: 40px;
+
+}
+.full_width{
+  width: 100%;
+}
+.error-message {
+  margin-top: 30px;
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.lang_radio-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_button{
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  color: #cbcbcb;
+  background: #002f68;
+ padding: 10px;
+  width: 100%;
+}
